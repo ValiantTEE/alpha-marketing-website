@@ -1748,6 +1748,37 @@ BACKGROUND DECORATION
 
 }
 
+.process-grid{
+    display:grid;
+    gap:20px;
+    margin-top:40px;
+}
+
+.process-card{
+    padding:28px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    transition:.35s ease;
+}
+
+.process-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(46,123,255,.35);
+    box-shadow:0 20px 50px rgba(46,123,255,.15);
+}
+
+.process-card h3{
+    margin-bottom:15px;
+    color:#fff;
+    font-size:1.5rem;
+}
+
+.process-card p{
+    margin:0;
+    color:var(--text);
+    line-height:1.8;
+}
 
 /*==================================================
 RESPONSIVE
@@ -4302,6 +4333,37 @@ RESPONSIVE
 
     }
 
+}
+
+.team-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.team-socials a {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.03);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.team-socials a:hover {
+    background: #229ED9;
+    border-color: #229ED9;
+    transform: translateY(-3px);
+}
+
+.team-socials i {
+    font-size: 24px;
 }
 /*==================================================
 SECTION DIVIDER
