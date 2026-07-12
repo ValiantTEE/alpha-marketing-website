@@ -1,0 +1,516 @@
+/*==================================================
+ANIMATIONS.CSS
+Alpha Marketing
+==================================================*/
+
+
+/*==================================================
+FADE UP
+==================================================*/
+
+@keyframes fadeUp{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.fade-up{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+
+/*==================================================
+FADE DOWN
+==================================================*/
+
+@keyframes fadeDown{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(-50px);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.fade-down{
+
+    animation:fadeDown .8s ease forwards;
+
+}
+
+
+/*==================================================
+FADE LEFT
+==================================================*/
+
+@keyframes fadeLeft{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateX(-60px);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.fade-left{
+
+    animation:fadeLeft .8s ease forwards;
+
+}
+
+
+/*==================================================
+FADE RIGHT
+==================================================*/
+
+@keyframes fadeRight{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.fade-right{
+
+    animation:fadeRight .8s ease forwards;
+
+}
+/*==================================================
+FLOATING ANIMATION
+==================================================*/
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+.float{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+
+/*==================================================
+PULSE ANIMATION
+==================================================*/
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+        opacity:.85;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.pulse{
+
+    animation:pulse 2.5s ease-in-out infinite;
+
+}
+
+
+/*==================================================
+LOADER ANIMATION
+==================================================*/
+
+@keyframes loaderFade{
+
+    0%{
+
+        opacity:1;
+
+        visibility:visible;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        visibility:hidden;
+
+    }
+
+}
+
+@keyframes loaderLogo{
+
+    0%{
+
+        transform:scale(.95);
+
+        opacity:.5;
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(.95);
+
+        opacity:.5;
+
+    }
+
+}
+
+.loader-logo{
+
+    animation:loaderLogo 1.8s ease-in-out infinite;
+
+}
+
+
+/*==================================================
+LOGO SLIDER
+==================================================*/
+
+@keyframes logoScroll{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    100%{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+.logo-track{
+
+    animation:logoScroll 30s linear infinite;
+
+}
+
+.logo-track:hover{
+
+    animation-play-state:paused;
+
+}
+
+
+/*==================================================
+GLOW ANIMATION
+==================================================*/
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(46,123,255,0);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 25px rgba(46,123,255,.35),
+            0 0 50px rgba(46,123,255,.15);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(46,123,255,0);
+
+    }
+
+}
+
+.glow{
+
+    animation:glow 2.5s ease-in-out infinite;
+
+}
+/*==================================================
+SCROLL REVEAL
+==================================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/*==================================================
+STAGGER DELAYS
+==================================================*/
+
+.delay-1{
+
+    transition-delay:.1s;
+
+}
+
+.delay-2{
+
+    transition-delay:.2s;
+
+}
+
+.delay-3{
+
+    transition-delay:.3s;
+
+}
+
+.delay-4{
+
+    transition-delay:.4s;
+
+}
+
+.delay-5{
+
+    transition-delay:.5s;
+
+}
+
+
+/*==================================================
+PROGRESS BAR
+==================================================*/
+
+.progress{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.progress div{
+
+    animation:progressLoad 2s ease forwards;
+
+    transform-origin:left;
+
+}
+
+@keyframes progressLoad{
+
+    from{
+
+        transform:scaleX(0);
+
+    }
+
+    to{
+
+        transform:scaleX(1);
+
+    }
+
+}
+
+
+/*==================================================
+CURSOR GLOW
+==================================================*/
+
+.cursor-glow{
+
+    transition:
+        transform .08s linear,
+        opacity .3s ease;
+
+}
+
+.cursor-glow.active{
+
+    opacity:1;
+
+    transform:translate(-50%, -50%) scale(1);
+
+}
+
+
+/*==================================================
+BUTTON HOVER
+==================================================*/
+
+.btn{
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.btn:active{
+
+    transform:translateY(0);
+
+}
+
+
+/*==================================================
+CARD HOVER
+==================================================*/
+
+.case-card,
+.team-card,
+.testimonial-card,
+.service-card,
+.stat-card,
+.why-card{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+
+/*==================================================
+SMOOTH SCROLL
+==================================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+/*==================================================
+REDUCED MOTION
+==================================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
