@@ -5244,3 +5244,89 @@ CUSTOM TOAST NOTIFICATION
     line-height:1.5;
 
 }
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-buttons {
+        display: flex;
+        gap: 8px;
+    }
+
+    .nav-buttons .btn {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+
+}
+@media (max-width: 768px){
+
+    .nav-links{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:0;
+        padding:20px 30px;
+
+        background:rgba(5,5,5,.98);
+        backdrop-filter:blur(20px);
+        border-top:1px solid rgba(255,255,255,.08);
+
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+
+        transform:translateY(-15px);
+        transition:all .3s ease;
+    }
+
+    .nav-links.active{
+        opacity:1;
+        visibility:visible;
+        pointer-events:auto;
+        transform:translateY(0);
+    }
+
+    .nav-links li{
+        width:100%;
+        border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav-links li:last-child{
+        border-bottom:none;
+    }
+
+    .nav-links a{
+        display:block;
+        width:100%;
+        padding:14px 0;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .menu-toggle.active span:nth-child(1){
+        transform:translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2){
+        opacity:0;
+    }
+
+    .menu-toggle.active span:nth-child(3){
+        transform:translateY(-7px) rotate(-45deg);
+    }
+}
