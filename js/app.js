@@ -504,4 +504,3 @@ if (contactForm) {
     });
 
 }
-showToast("Toast is working!");
