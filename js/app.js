@@ -382,37 +382,32 @@ window.addEventListener("scroll", () => {
 /*==================================================
 BUTTON RIPPLE EFFECT
 ==================================================*/
+button.addEventListener("click", function (e) {
 
-document.querySelectorAll(".btn").forEach(button => {
+    const ripple = document.createElement("span");
 
-    button.addEventListener("click", function (e) {
+    const rect = this.getBoundingClientRect();
 
-        const ripple = document.createElement("span");
+    const size = Math.max(rect.width, rect.height);
 
-        const rect = this.getBoundingClientRect();
+    ripple.style.width = size + "px";
+    ripple.style.height = size + "px";
 
-        const size = Math.max(rect.width, rect.height);
+    ripple.style.left =
+        (e.clientX - rect.left - size / 2) + "px";
 
-        ripple.style.width = size + "px";
-        ripple.style.height = size + "px";
+    ripple.style.top =
+        (e.clientY - rect.top - size / 2) + "px";
 
-        ripple.style.left =
-            (e.clientX - rect.left - size / 2) + "px";
+    ripple.classList.add("ripple");
 
-        ripple.style.top =
-            (e.clientY - rect.top - size / 2) + "px";
+    this.appendChild(ripple);
 
-        ripple.classList.add("ripple");
+    setTimeout(() => {
 
-        this.appendChild(ripple);
+        ripple.remove();
 
-        setTimeout(() => {
-
-            ripple.remove();
-
-        }, 600);
-
-    });
+    }, 600);
 
 });
 
