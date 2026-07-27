@@ -272,23 +272,17 @@ BUTTONS
 ==================================================*/
 
 .btn{
-
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
-
     padding:16px 34px;
-
     border-radius:999px;
-
     transition:var(--transition);
-
     font-weight:700;
-
     cursor:pointer;
 
+    position:relative;
+    overflow:hidden;
 }
 
 .btn-primary{
@@ -4232,35 +4226,130 @@ TEAM HOVER EFFECTS
 }
 
 
+/*=====================================
+TEAM PROFILE PAGE
+=====================================*/
 /*==================================================
-TEAM ENTRANCE ANIMATION
+TEAM PROFILE PAGE
 ==================================================*/
 
-.team-card{
-
-    animation:fadeUp .8s ease both;
-
+.team-profile{
+    padding:160px 0 100px;
 }
 
-.team-card:nth-child(2){
-
-    animation-delay:.1s;
-
+.team-profile .container{
+    max-width:900px;
+    margin:0 auto;
+    padding:0 20px;
 }
 
-.team-card:nth-child(3){
-
-    animation-delay:.2s;
-
+.profile-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:50px;
+    text-align:center;
+    transition:.35s ease;
+    animation:fadeUp .8s ease;
 }
 
-.team-card:nth-child(4){
-
-    animation-delay:.3s;
-
+.profile-card:hover{
+    border-color:rgba(46,123,255,.35);
+    box-shadow:0 25px 60px rgba(46,123,255,.15);
 }
 
+.profile-image{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    object-position:center;
+    border-radius:20px;
+    margin:0 auto 30px;
+    display:block;
+    border:2px solid rgba(46,123,255,.2);
+}
 
+.profile-card h1{
+    font-size:2.5rem;
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.profile-role{
+    color:var(--primary);
+    font-size:1rem;
+    font-weight:600;
+    margin-bottom:30px;
+}
+
+.profile-text{
+    max-width:650px;
+    margin:0 auto 22px;
+    line-height:2;
+    color:var(--text);
+}
+
+.profile-card hr{
+    border:none;
+    border-top:1px solid rgba(255,255,255,.08);
+    margin:35px 0;
+}
+
+.profile-card strong{
+    color:#fff;
+}
+
+.profile-socials{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:18px;
+}
+
+.profile-socials a{
+    width:55px;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:16px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    color:#fff;
+    font-size:1.2rem;
+    transition:.3s ease;
+}
+
+.profile-socials a:hover{
+    background:var(--primary);
+    border-color:var(--primary);
+    transform:translateY(-5px);
+}
+
+@media (max-width:768px){
+
+    .team-profile{
+        padding:130px 0 70px;
+    }
+
+    .profile-card{
+        padding:35px 22px;
+    }
+
+    .profile-image{
+        width:180px;
+        height:180px;
+    }
+
+    .profile-card h1{
+        font-size:2rem;
+    }
+
+    .profile-text{
+        line-height:1.9;
+    }
+
+}
 /*==================================================
 RESPONSIVE
 ==================================================*/
@@ -5052,8 +5141,109 @@ footer{
     font-size:.95rem;
 
 }
+.footer-bottom a{
+    color:var(--primary);
+    text-decoration:none;
+    transition:.3s ease;
+}
 
+.footer-bottom a:hover{
+    color:#fff;
+}
 
+/*==================================================
+PRIVACY POLICY
+==================================================*/
+
+.privacy-page{
+    padding:160px 0 100px;
+}
+
+.privacy-page .container{
+    max-width:850px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+.privacy-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:50px;
+    transition:.35s ease;
+    animation:fadeUp .8s ease;
+}
+
+.privacy-card:hover{
+    border-color:rgba(46,123,255,.35);
+    box-shadow:0 25px 60px rgba(46,123,255,.12);
+}
+
+.privacy-card h1{
+    color:#fff;
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.privacy-card h2{
+    color:#fff;
+    font-size:1.35rem;
+    margin:35px 0 15px;
+}
+
+.privacy-card p{
+    color:var(--text);
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+.privacy-card strong{
+    color:#fff;
+}
+
+.privacy-card a{
+    color:var(--primary);
+    text-decoration:none;
+    transition:.3s ease;
+}
+
+.privacy-card a:hover{
+    color:#fff;
+}
+
+.back-home{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:30px;
+    color:var(--primary);
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.back-home:hover{
+    color:#fff;
+}
+
+@media (max-width:768px){
+
+    .privacy-page{
+        padding:130px 0 70px;
+    }
+
+    .privacy-card{
+        padding:35px 25px;
+    }
+
+    .privacy-card h1{
+        font-size:2rem;
+    }
+
+    .privacy-card h2{
+        font-size:1.2rem;
+    }
+
+}
 /*==================================================
 BACK TO TOP
 ==================================================*/
